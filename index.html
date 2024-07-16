@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task9</title>
+  <link rel="stylesheet" href="css/all.min.css">
+  <link rel="stylesheet" href="css/animate.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>  
+<div class="color-box position-fixed shadow-sm">
+    <div class="color-options p-3 position-relative">
+        <h3>Pick Your Color: </h3>
+        <ul class="list-unstyled d-flex flex-wrap">
+            <li class="w-25 p-2"><div class="w-100 color-option default"></div></li>
+            <li class="w-25 p-2"><div class="w-100 color-option"></div></li>
+            <li class="w-25 p-2"><div class="w-100 color-option"></div></li>
+            <li class="w-25 p-2"><div class="w-100 color-option"></div></li>
+            <li class="w-25 p-2"><div class="w-100 color-option"></div></li>
+            <li class="w-25 p-2"><div class="w-100 color-option"></div></li>
+            <li class="w-25 p-2"><div class="w-100 color-option"></div></li>
+            <li class="w-25 p-2"><div class="w-100 color-option"></div></li>
+        </ul>
+    </div>
+    <div class="color-box-icon position-absolute" id="color-box-switch">
+        <i class="fa fa-solid fa-cog p-2 fa-spin"></i>
+    </div>
+</div>
+
+    <nav class="border-bottom border-dark py-5">
+      <div class="container">
+        <div class="d-flex justify-content-center align-items-center flex-column flex-md-row">
+          <h1 class=" me-3 text-white mb-3 mb-md-0 wow bounceInLeft"> <span class="text-danger display-6 fw-bold">M</span>ovies<span class="text-info display-6 fw-bold">N</span>ews</h1>
+          <div class="w-50 position-relative">
+            <input type="text" id="searchInput" class="form-control text-white-50 rounded-pill" placeholder="get movies by word...">
+            <i class="fa fa-search position-absolute d-block wow bounceInUp" id="search-icon1"></i>
+            <i class="fa fa-times-circle position-absolute d-none wow bounceInDown" id="search-icon2"></i>
+
+            <div class="position-absolute" id="alertSearch"></div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+  <div class="container py-5 moviesContainer">
+    <h3 class="main-text wow bounceInUp text-center fs-1" data-wow-delay=".5s" id="categoryTitle">New playing</h3>
+    <hr class="border-dark">
+    <div class="row g-4" id="moviesCategory">
+    </div>
+  </div>
+  <hr class="border-dark">
+
+  
+  <div class="container py-5" id="contactUs">
+    <h3 class="main-text text-center fs-1 mb-5" data-wow-delay=".5s" id="categoryTitle">Contact Us</h3>
+    <form class="row" id="contactForm">
+        <div class="col-md-6 m-auto">
+            <div class="mb-3">
+                <input type="text" class="form-control text-white-50" placeholder="Enter your name" id="username">
+                <div id="alertName"></div>
+            </div>
+            <div class="mb-3">
+                <input type="text" class="form-control text-white-50" placeholder="Enter your email" id="userEmail">
+                <div id="alertEmail"></div>
+            </div>
+            <div class="mb-3">
+                <input type="text" class="form-control text-white-50" placeholder="Enter your phone" id="userPhone">
+                <div id="alertPhone"></div>
+            </div>
+            <div class="mb-3">
+                <input type="text" class="form-control text-white-50" placeholder="Enter your age" id="userAge">
+                <div id="alertAge"></div>
+            </div>
+            <div class="mb-3 position-relative">
+                <input type="password" class="form-control text-white-50" placeholder="Enter your password" id="userPass">
+                <div id="alertPass"></div>
+                <i class="fa fa-eye" id="showPass"></i>
+            </div>
+            <div class="mb-3">
+                <input type="password" class="form-control text-white-50" placeholder="Validate your password" id="userVPass">
+                <div id="alertVPass"></div>
+            </div>
+
+            <button type="button" id="submitBtn" disabled class="btn bg-main text-white">Submit</button>
+        </div>
+    </form>
+</div>
+
+
+  <div id="menu" class="position-fixed custome-bg text-white-50 p-3 d-flex flex-column justify-content-between">
+    <div class="mt-5">
+        <ul class="list-unstyled">
+            <li class="fs-3">
+              <span id="/movie/now_playing">Now playing</span>
+            </li>
+            <li class="fs-3">
+              <span id="/movie/popular">Popular</span> 
+            </li>
+            <li class="fs-3">
+              <span id="/movie/top_rated">Top Rated</span>
+            </li>
+            <li class=" fs-3">
+                <span id="/trending/all/week">Trending</span>
+            </li>
+            <li class=" fs-3">
+                <span id="/movie/upcoming">Upcoming</span>
+            </li>
+            <li class=" fs-3">
+              <span>
+                <a href="#contactUs" class="text-white-50 text-decoration-none">Contact Us</a>
+              </span> 
+            </li>
+        </ul> 
+    </div>
+    <div class="footer">
+      <div class="mb-3">
+            <i class="fa-brands fa-facebook-f text-white me-2"></i>
+            <i class="fa-brands fa-twitter text-white me-2"></i>
+            <i class="fa-solid fa-globe text-white"></i>
+      </div>
+      <div class="cobyRight main-color">
+        Best regards, Marwan..
+      </div>
+    </div>
+    <div class="openbar bg-main d-flex flex-column justify-content-between align-items-center w-25" id="toggle-btn">
+      <h1></h1>
+        <i class="fa-solid fa-bars text-dark " id="control-btn"></i>
+        <div>
+          <i class="fa-solid fa-globe d-block text-dark"></i>
+          <i class="fa-solid fa-share-nodes text-dark"></i>
+        </div>
+    </div>
+</div>
+<button class="btn bg-main py-2 px-3 rounded-3" id="btn-up">
+  <i class="fa fa-solid fa-arrow-alt-circle-up fa-2x text-white"></i>
+</button>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/wow.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
