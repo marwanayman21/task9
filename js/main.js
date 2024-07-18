@@ -2,7 +2,7 @@ const imgePath = 'https://image.tmdb.org/t/p/w500/';
 const moviesCategory = document.getElementById('moviesCategory');
 const searchInput = document.querySelector('#searchInput');
 const categoryTitle = document.querySelector('#categoryTitle');
-const key = '37a194ab674674d3542bdfa59c52f54f';
+const key = 'f1902cfca36e463454f6e0a78813f99c';
 let searchIcon1 =  document.getElementById("search-icon1");
 let searchIcon2 =  document.getElementById("search-icon2");
 searchInput.addEventListener('keyup', async function () {
